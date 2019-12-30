@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CRUD Proyect</title>
+</head>
+<body ng-app = "app">
+    <div class="title">Contact List</div>
+    <div class="main-container" ng-controller="ContactInfo">
+      <div class="card" ng-repeat="contact in contacts">
+        <div class="image-container">
+          <img class="image" src="{{contact.avatar}}">
+        </div>
+        <div class="data-container">
+          <div class="user-name">{{contact.first_name + ' ' + contact.last_name}} </div>
+          <div class="user-email">{{contact.email}}</div>
+        </div>
+      </div>
+    </div>
+    
+    
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+<script src="./scripts/app.js"></script>
+<link rel="stylesheet" type="text/css" href="./styles/style.css">
+
+</html>
